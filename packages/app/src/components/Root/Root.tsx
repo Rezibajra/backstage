@@ -35,6 +35,7 @@ import {
 import { NavLink } from 'react-router-dom';
 import { Settings as SidebarSettings } from '@backstage/plugin-user-settings';
 import { SidebarSearch } from '@backstage/plugin-search';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 const useSidebarLogoStyles = makeStyles({
   root: {
@@ -80,6 +81,8 @@ export const Root = ({ children }: PropsWithChildren<{}>) => (
       <SidebarItem icon={ExtensionIcon} to="api-docs" text="APIs" />
       <SidebarItem icon={LibraryBooks} to="docs" text="Docs" />
       <SidebarItem icon={CreateComponentIcon} to="create" text="Create..." />
+      <SidebarItem icon={GitHubIcon} to="github-playground" text="GitHub Repository" />
+
       {/* End global nav */}
       <SidebarDivider />
       <SidebarItem icon={MapIcon} to="tech-radar" text="Tech Radar" />

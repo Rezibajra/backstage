@@ -24,6 +24,7 @@ import { UserSettingsPage } from '@backstage/plugin-user-settings';
 import { apis } from './apis';
 import { entityPage } from './components/catalog/EntityPage';
 import { Root } from './components/Root';
+import { GithubPlaygroundPage } from '@internal/plugin-github-playground';
 
 const githubProvider: SignInProviderConfig = {
      id: 'github-auth-provider',
@@ -78,6 +79,7 @@ const routes = (
     <Route path="/catalog-import" element={<CatalogImportPage />} />
     <Route path="/search" element={<SearchPage />} />
     <Route path="/settings" element={<UserSettingsPage />} />
+    <Route path="/github-playground" element={<GithubPlaygroundPage />}/>
   </FlatRoutes>
 );
 
