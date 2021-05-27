@@ -6,6 +6,7 @@ import {
   FlatRoutes,
   OAuthRequestDialog,
   githubAuthApiRef,
+  gitlabAuthApiRef,
   SignInProviderConfig,
   SignInPage
 } from '@backstage/core';
@@ -25,12 +26,20 @@ import { apis } from './apis';
 import { entityPage } from './components/catalog/EntityPage';
 import { Root } from './components/Root';
 import { GithubPlaygroundPage } from '@internal/plugin-github-playground';
+import { GitlabPlaygroundPage } from '@internal/plugin-gitlab-playground';
 
 const githubProvider: SignInProviderConfig = {
      id: 'github-auth-provider',
      title: 'GitHub',
      message: 'Sign in using GitHub',
      apiRef: githubAuthApiRef,
+};
+
+const gitlabProvider: SignInProviderConfig = {
+  id: 'gitlab-auth-provider',
+  title: 'Gitlab',
+  message: 'Sign in using Gitlab',
+  apiRef: gitlabAuthApiRef,
 };
 
 const app = createApp({
@@ -50,7 +59,7 @@ const app = createApp({
     SignInPage: props => (
       <SignInPage
         {...props}
-        providers={['guest', githubProvider]} 
+        providers={['guest', githubProvider,gitlabProvider]} 
       />
     ),
   },
@@ -80,6 +89,7 @@ const routes = (
     <Route path="/search" element={<SearchPage />} />
     <Route path="/settings" element={<UserSettingsPage />} />
     <Route path="/github-playground" element={<GithubPlaygroundPage />}/>
+    <Route path="/gitlab-playground" element={<GitlabPlaygroundPage />}/>
   </FlatRoutes>
 );
 

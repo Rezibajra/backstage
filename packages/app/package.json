@@ -22,6 +22,7 @@
     "@backstage/test-utils": "^0.1.11",
     "@backstage/theme": "^0.2.7",
     "@internal/plugin-github-playground": "^0.1.0",
+    "@internal/plugin-gitlab-playground": "^0.1.0",
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "history": "^5.0.0",

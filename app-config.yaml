@@ -52,6 +52,10 @@ auth:
       development:
         clientId: a78a0c3f889d5caadacb
         clientSecret: fc711c4c896bdbef91927d3d4c71e8037afe5d4e 
+    gitlab:
+      development:
+        clientId: 94ebca554c4fde5f7b792dbaf43022089c086a4f1a81390d94b3b984feb65aa3
+        clientSecret: eaacce7931988f425248b627c3cfe8307be8ae85d173e80219062e8f2770dc55
 
 
 scaffolder:
